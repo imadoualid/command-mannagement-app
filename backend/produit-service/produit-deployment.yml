@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: produit-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: produit
+  template:
+    metadata:
+      labels:
+        app: produit
+    spec:
+      containers:
+      - name: produit-container
+        image: imadoualid/produit:1
+        imagePullPolicy: Always
+

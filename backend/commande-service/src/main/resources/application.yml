@@ -1,0 +1,9 @@
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: commande-service
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-service.default.svc.cluster.local/eureka/
+  healthcheck:
+    enabled: true
